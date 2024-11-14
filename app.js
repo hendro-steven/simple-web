@@ -6,7 +6,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");
-  res.end("This is a web server version 3.0 -- BUG DETECTED! \n");
+  res.end("This is a web server version 1.0 \n");
 });
 
 server.listen(port, hostname, () => {
