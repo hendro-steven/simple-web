@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-web
+  labels:
+    name: app-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-web
+  template:
+    metadata:
+      name: app-web
+      labels:
+        name: app-web
+    spec:
+      containers:
+        - name: app-web
+          image: hendrosteven/app-web:1.0
+          ports:
+            - containerPort: 3000
